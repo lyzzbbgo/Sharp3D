@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Sharp3D.Modules.Standard.UI.Controls.CompositeViewportView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Widgets="clr-namespace:Sharp3D.UI.Widgets;assembly=Sharp3D.UI.Widgets"
+             xmlns:UI="clr-namespace:Sharp3D.Common.UI;assembly=Sharp3D.Common"
+             xmlns:ViewModels="clr-namespace:Sharp3D.Modules.Standard.UI.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             UI:ViewModel.ViewModelType="{x:Type ViewModels:CompositeViewportViewModel}">
+    <Grid>
+        <Widgets:Viewport Scene="{Binding Scene}" />
+    </Grid>
+</UserControl>
