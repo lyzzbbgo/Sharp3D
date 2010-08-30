@@ -11,6 +11,10 @@
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
 
+                        <Grid>
+                            <Viewport3D x:Name="PART_Viewport" />
+                            <Border x:Name="PART_ManipulationArea" Background="Transparent" />
+                        </Grid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

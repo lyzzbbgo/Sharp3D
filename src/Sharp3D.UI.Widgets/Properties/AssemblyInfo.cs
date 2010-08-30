@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Piotr Włodek")]
 [assembly: AssemblyProduct("Sharp3D.UI.Widgets")]
-[assembly: AssemblyCopyright("Copyright © Piotr Włodek 2010")]
+[assembly: AssemblyCopyright("Copyright © 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

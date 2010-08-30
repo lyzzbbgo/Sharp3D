@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Piotr Włodek")]
 [assembly: AssemblyProduct("Sharp3D.Renderer")]
-[assembly: AssemblyCopyright("Copyright © Piotr Włodek 2010")]
+[assembly: AssemblyCopyright("Copyright © 2010 Piotr Włodek")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

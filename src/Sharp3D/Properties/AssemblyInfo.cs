@@ -7,12 +7,12 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Sharp3D")]
+[assembly: AssemblyTitle("Sharp 3D")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Sharp3D")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2010")]
+[assembly: AssemblyCompany("Piotr Włodek")]
+[assembly: AssemblyProduct("Sharp 3D")]
+[assembly: AssemblyCopyright("Copyright © 2010 Piotr Włodek")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

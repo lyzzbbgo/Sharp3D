@@ -24,6 +24,8 @@ namespace Sharp3D.Common.UI
 
         #region XAML Support
 
+        #region ViewModelType
+
         public static Type GetViewModelType(DependencyObject obj)
         {
             return (Type)obj.GetValue(ViewModelTypeProperty);
@@ -36,19 +38,49 @@ namespace Sharp3D.Common.UI
 
         public static readonly DependencyProperty ViewModelTypeProperty =
             DependencyProperty.RegisterAttached("ViewModelType", typeof(Type), typeof(ViewModel),
-                new UIPropertyMetadata(null, OnViewModelTypeChanged));
+                                                new UIPropertyMetadata(null, OnViewModelTypeChanged));
 
         private static void OnViewModelTypeChanged(DependencyObject dp, DependencyPropertyChangedEventArgs args)
         {
             var control = (Control) dp;
             var type = (Type) args.NewValue;
-            if (type != null)
+            if (type != null && !IsInDesignMode && ServiceLocator.Current != null)
             {
                 var model = ServiceLocator.Current.GetInstance(type);
                 control.DataContext = model;
             }
         }
 
+        #endregion
+
+        #region DesignViewModelType
+
+        public static Type GetDesignViewModelType(DependencyObject obj)
+        {
+            return (Type)obj.GetValue(DesignViewModelTypeProperty);
+        }
+
+        public static void SetDesignViewModelType(DependencyObject obj, Type value)
+        {
+            obj.SetValue(DesignViewModelTypeProperty, value);
+        }
+
+        public static readonly DependencyProperty DesignViewModelTypeProperty =
+            DependencyProperty.RegisterAttached("DesignViewModelType", typeof(Type), typeof(ViewModel),
+                                                new UIPropertyMetadata(null, OnDesignViewModelTypeChanged));
+
+        private static void OnDesignViewModelTypeChanged(DependencyObject dp, DependencyPropertyChangedEventArgs args)
+        {
+            var control = (Control) dp;
+            var type = (Type) args.NewValue;
+            if (type != null && IsInDesignMode)
+            {
+                control.DataContext = Activator.CreateInstance(type);
+            }
+        }
+
+        #endregion
+        
         #endregion
 
         /// <summary>

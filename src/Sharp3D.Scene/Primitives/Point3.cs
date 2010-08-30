@@ -29,5 +29,10 @@ namespace Sharp3D.Scene.Primitives
             Y = y;
             Z = z;
         }
+
+        public static explicit operator Vector3(Point3 point3)
+        {
+            return new Vector3(point3.X, point3.Y, point3.Z);
+        }
     }
 }

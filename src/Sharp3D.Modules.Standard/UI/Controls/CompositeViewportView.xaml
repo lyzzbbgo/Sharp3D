@@ -6,9 +6,15 @@
              xmlns:Widgets="clr-namespace:Sharp3D.UI.Widgets;assembly=Sharp3D.UI.Widgets"
              xmlns:UI="clr-namespace:Sharp3D.Common.UI;assembly=Sharp3D.Common"
              xmlns:ViewModels="clr-namespace:Sharp3D.Modules.Standard.UI.ViewModels"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300"
-             UI:ViewModel.ViewModelType="{x:Type ViewModels:CompositeViewportViewModel}">
+             mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300"
+             UI:ViewModel.ViewModelType="{x:Type ViewModels:CompositeViewportViewModel}"
+             UI:ViewModel.DesignViewModelType="{x:Type ViewModels:CompositeViewportViewModel}">
+    <UserControl.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF447EA8" Offset="0" />
+            <GradientStop Color="White" Offset="1" />
+        </LinearGradientBrush>
+    </UserControl.Background>
     <Grid>
         <Widgets:Viewport Scene="{Binding Scene}" />
     </Grid>

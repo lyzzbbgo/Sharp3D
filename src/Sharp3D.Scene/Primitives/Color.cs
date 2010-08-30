@@ -15,6 +15,7 @@ namespace Sharp3D.Scene.Primitives
         /// <param name="b">Blue component.</param>
         public Color(byte r, byte g, byte b) : this()
         {
+            A = 255;
             R = r;
             G = g;
             B = b;

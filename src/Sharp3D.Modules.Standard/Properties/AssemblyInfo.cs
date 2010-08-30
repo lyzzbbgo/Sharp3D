@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("Sharp3D.Modules.Standard")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Piotr Włodek")]
 [assembly: AssemblyProduct("Sharp3D.Modules.Standard")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2010")]
+[assembly: AssemblyCopyright("Copyright © 2010 Piotr Włodek")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

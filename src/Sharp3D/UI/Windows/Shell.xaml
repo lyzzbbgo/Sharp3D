@@ -1,7 +1,9 @@
 ﻿<Window x:Class="Sharp3D.UI.Windows.ShellWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:Regions="clr-namespace:Microsoft.Practices.Prism.Regions;assembly=Microsoft.Practices.Prism" xmlns:Common="clr-namespace:Sharp3D.Common;assembly=Sharp3D.Common" Title="{Binding DisplayName}">
+        xmlns:Regions="clr-namespace:Microsoft.Practices.Prism.Regions;assembly=Microsoft.Practices.Prism" xmlns:Common="clr-namespace:Sharp3D.Common;assembly=Sharp3D.Common"
+        Icon="\Images\Camcorder.ico"
+        Title="{Binding DisplayName}">
     
     <Grid>
         <ContentControl Regions:RegionManager.RegionName="{x:Static Common:Constants.MainRegion}" />
