@@ -9,8 +9,8 @@ namespace Sharp3D.UI.Widgets
     {
         private readonly AxisAngleRotation3D m_Rotation = new AxisAngleRotation3D();
         private readonly ScaleTransform3D m_Scale = new ScaleTransform3D();
-        private readonly Transform3DGroup m_Transform;
         private readonly TranslateTransform3D m_Translate = new TranslateTransform3D();
+        private readonly Transform3DGroup m_Transform;
         
         private FrameworkElement m_EventSource;
         private Point m_PreviousPosition2D;
@@ -104,6 +104,9 @@ namespace Sharp3D.UI.Widgets
 
             var axis = Vector3D.CrossProduct(m_PreviousPosition3D, currentPosition3D);
             var angle = Vector3D.AngleBetween(m_PreviousPosition3D, currentPosition3D);
+            
+            if (axis == new Vector3D(0, 0, 0) || angle == 0.0) return;
+            
             var delta = new Quaternion(axis, -angle);
             var q = new Quaternion(m_Rotation.Axis, m_Rotation.Angle);
 
